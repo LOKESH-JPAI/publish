@@ -1,0 +1,92 @@
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 45px;
+  height: 45px;
+  background-color: #007bff;
+  /* Bootstrap primary color */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #0056b3;
+  /* Darker blue */
+}
+
+.back-to-top:active {
+  transform: scale(0.95);
+  /* Button click effect */
+}
+
+.video-container {
+  position: relative;
+}
+
+.video-control-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  opacity: 1;
+  /* Default visibility */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.video-container:hover .video-control-btn {
+  opacity: 1;
+}
+
+.video-container:hover .pause-btn {
+  opacity: 1;
+}
+
+.video-container .pause-btn {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show play button only when paused */
+.video-container:hover .pause-btn {
+  display: block;
+}
+
+.visit-container {
+  display: flex;
+  justify-content: flex-end;
+  /* Aligns the link to the right */
+  margin-top: 10px;
+}
+
+.visit-site-link {
+  text-decoration: none;
+  color: #007bff;
+  /* Color for the link */
+  cursor: pointer;
+  padding: 5px 10px;
+  /* Add padding to make it look like a button */
+  transition: all 0.3s ease;
+}
+
+.visit-site-link:hover {
+  background-color: #007bff;
+  /* Button-like background on hover */
+  color: white;
+  /* Change text color to white on hover */
+  padding: 5px 10px;
+  /* Add padding to make it look like a button */
+  border-radius: 5px;
+  /* Rounded corners for button-like appearance */
+}
